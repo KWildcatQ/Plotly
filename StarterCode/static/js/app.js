@@ -1,6 +1,6 @@
   // Import .json and meta-data
   function metaData(sample){
-    d3.json("samples.json").then((data) => {
+    d3.json("https://kwildcatq.github.io/Plotly-Challenge-HW/data/samples.json").then((data) => {
       var sampleNames = data.names;
       var metaData = data.metadata;
       var resultArray = metaData.filter(sampleObj => sampleObj.id == sample);
@@ -32,7 +32,7 @@
 
 // Setting .json file into a variable/reading json data
   var selector = d3.select("#selDataset");
-    d3.json("samples.json").then((data) => {
+    d3.json("https://kwildcatq.github.io/Plotly-Challenge-HW/data/samples.json").then((data) => {
    // Call updatePlotly() when a change takes place to the DOM
     var sampleNames = data.names;
    // Obtaining IDs for drop down menu
@@ -48,7 +48,7 @@
 
 // Importing .json data for and chart setup
   function chartSetup(sample){
-    d3.json("samples.json").then((data) => {
+    d3.json("https://kwildcatq.github.io/Plotly-Challenge-HW/data/samples.json").then((data) => {
       var sampleNames = data.names;
       var samples = data.samples;
       var resultArray = samples.filter(sampleObj => sampleObj.id == sample);
